@@ -1,12 +1,21 @@
+networks:
+  default:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.42.12.8/29
+          gateway: 172.42.12.9
+
 services:
   notebook:
-    image: "svtter/swr-distil:notebook"
+    image: "svtter/tinyyolo:notebook"
     volumes:
       - .:/app
       - .netrc:/root/.netrc # using your own, for wandb login
       - ~/work/Dataset:/app/data
+      - /data1/xiuhao/datasets/tiny-yolo/weights:/app/weights
     ports:
-      - 8894:8888
+      - 8900:8888
     shm_size: '32gb'
     deploy:
       resources:

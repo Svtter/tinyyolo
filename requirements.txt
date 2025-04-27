@@ -1,10 +1,10 @@
-numpy
-torch
-torchvision
-einops
-onnx
-lightning
-tensorboard
-matplotlib
+# numpy
+# torch
+# torchvision
+# lightning
+# tensorboard
+# matplotlib
 pycocotools
 pyqt5
+einops
+onnx
