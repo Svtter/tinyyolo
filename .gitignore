@@ -1,0 +1,27 @@
+.idea
+venv/
+__pycache__/
+
+repo/
+pytorch/data/mnist/
+pytorch/data/meter/
+pytorch/data/analysis/picture/
+pytorch/data/get_single/merge_np/
+pytorch/data/get_single/no_tilt_with_handle/
+pytorch/models/
+
+regression/data/
+
+src/data/
+
+temp.py
+*.npy
+data
+wandb
+
+# ignore checkpoints
+swr
+
+# ignore tmp folder
+tmp
+.netrc
