@@ -1,0 +1,18 @@
+services:
+  notebook:
+    image: "svtter/swr-distil:notebook"
+    volumes:
+      - .:/app
+      - .netrc:/root/.netrc # using your own, for wandb login
+      - ~/work/Dataset:/app/data
+    ports:
+      - 8894:8888
+    shm_size: '32gb'
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
